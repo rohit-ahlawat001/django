@@ -1,0 +1,72 @@
+CHAPTOR ONE SETUP (CHAPTOR -- 1)
+
+step one- create the virtaul envoeinment 
+python -m venv venv   command to create the virtual environment
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser    use the command in powershell to get the venv align
+==> "Remove-Item -Recurse -Force venv" comamnd to remove the old ven file
+
+step two activate the virtaul envoronment 
+.\venv\Scripts\Activate.ps1   or .\venv\Scripts\Activate
+
+step-3
+Install django using
+pip instal django 
+
+Step 4 verify the django installed
+python -m django --version
+
+step 5 need to create the site folder to run the project 
+ python -m django startproject mysite .
+
+ ==> manage.py is the main file because if we need to DB and server or run projct the we need to add by manage.py
+
+ step 6 ==> Run porject unsing the "python manage.py runserver"
+
+ ==> setting.py will be our rule book where We need to chekc the which DB need add
+
+ ==> urls.py address add krti h ki web me konse konse routes h to urls.py me define hote h
+
+ ==> init.py django ko notify krta h ye python folter hote
+
+ ==> To create the another file in the python we use the command 
+ python manage.py startapp newproject
+
+ ==> In new poject views.py chandle the all operations
+
+ ==>> models.py define krta h ki modles or feature ki shape kya hogi 
+
+ ==> Admin.py records manage krta h kya data h or data contraoll kr skte h or data
+
+ ==> migrations data editions and other things ko handle krti h
+
+ ==> need to define the new projects in the setting.py jise django ko pta lg jay ki another bhhi koi api create hui h 
+
+ example:- 
+
+ INSTALLED_APPS = [
+    'django.contrib.admin',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.messages',
+    'django.contrib.staticfiles',
+    'newproject', <<=== need to define this
+]
+ 
+CHAPTOR TWO URLS & VIEWS (CHAPTOR -- 2)
+
+==> these are the heart of the django 
+
+=>> urls and views whixh problem sole ---> How a platform decide which servies need to show to client ==> compies has the system once client click on the url then system will read and match the page and once page match then related info will display to client.
+
+==> we have two parts in this 1 url routing (URl) client cliks and right page match this will work and the other hands views prepare the data display to client.
+
+==> URL, Views, Class base views
+
+==> For url need to define the [path] which is python inbuild function. 
+syntax==> path('address/', view_function, name = "nickname")
+
+==> WE have two types of the views 1) Function Based and the 2) Class Based
+
+==> request object in python:- That holds the cloends actions what kind of actions client take on platform like visit routes and the fill forms
+
