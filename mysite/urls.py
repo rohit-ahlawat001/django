@@ -21,5 +21,5 @@ from newproject import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # path ('home/', views.show_Response, name= "home"),
+    path ('home/', views.show_Response, name= "home"),
 ]
